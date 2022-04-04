@@ -81,28 +81,26 @@ export function HomeSrceen() {
   {
     return (
       <View style={styles.ListItem}>
-          <View>
-          </View>
           {
               !todo?.completed && 
               (
               <TouchableOpacity onPress={() => markTodoComplete(todo?.id) }  >
                {/* <Icon name='check' size={25} color="white" /> */}
-               <CheckBox tintColor={'#007aff'} animationDuration={0.5} value={toggleCheckBox} onValueChange={ () => markTodoComplete(todo?.id) }  style={{ transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }] }} />
+               <CheckBox  tintColor={'#007aff'} animationDuration={0.5} value={toggleCheckBox} onValueChange={ () => markTodoComplete(todo?.id) }  style={{ transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }] }} />
               </TouchableOpacity>
               )
           }
           <TouchableOpacity onPress={ () => deleteTodo(todo?.id) } >
-          <Text style={{ textDecorationLine: todo?.completed?"line-through" : "none", color: "white", padding: 5, marginLeft: 1, marginTop: 24,}} > {todo?.task} </Text>
+          <Text style={{ textDecorationLine: todo?.completed?"line-through" : "none", color: "white", padding: 5, marginLeft: 1, marginTop: 1,}} > {todo?.task} </Text>
           </TouchableOpacity>
       </View>
     );
   }
 
   return (
-    <View style={{ flex: 1,  backgroundColor: "#282828" }}>
+    <View style={{ flex: 1,  backgroundColor: "#282828",  }}>
       <ImageBackground style={styles.headerImageToDoApp} source={HeaderImageToDO} >
-      <Text style={{color: 'white', fontSize: 25, marginTop: 195, padding: 25, fontWeight: 'bold' }} >Whats your next taks?</Text>
+      <Text style={{color: 'white', fontSize: 25, marginTop: 195, padding: 25, fontWeight: 'bold',  }} >Whats your next taks?</Text>
       </ImageBackground>
       <FlatList showsVerticalScrollIndicator={false}  data={Add} renderItem={({item})=> <ListItem todo={item} /> } />
       <View style={styles.TodoTaskBar} >
@@ -122,6 +120,7 @@ const styles = StyleSheet.create({
     height: 270,
     borderBottomLeftRadius: 6,
     borderBottomRightRadius: 6,
+    marginBottom: 45,
   },
 
   TodoTaskBar: {
@@ -172,6 +171,7 @@ const styles = StyleSheet.create({
     padding: 5,
     marginLeft: 35,
     marginRight: 35,
+    
   },
 
   header:

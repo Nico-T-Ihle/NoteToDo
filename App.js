@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { HomeSrceen } from './app/Home/HomeSrceen';
 import { AboutScreen } from './app/About/AboutScreen';
+import { CustomDrawer } from './app/Home/CustomDrawer';
 
 
 const Drawer = createDrawerNavigator();
@@ -13,7 +14,7 @@ const Drawer = createDrawerNavigator();
 const YourApp = () => {
   return (
     <NavigationContainer >
-      <Drawer.Navigator initialRouteName="OfflineLogin" screenOptions={{ headerShown: false, }} >
+      <Drawer.Navigator drawerContent={props => <CustomDrawer {... props} />}  screenOptions={{drawerStyle: { backgroundColor: 'white', width: 240, }, }} initialRouteName="OfflineLogin"  >
         <Drawer.Screen name="Todo" component={HomeSrceen} />
         <Drawer.Screen name="Aboute" component={AboutScreen} />
       </Drawer.Navigator>
