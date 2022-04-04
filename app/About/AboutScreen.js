@@ -24,7 +24,6 @@ export function AboutScreen() {
             <Text style={styles.buttonText}>Aboute me</Text>
           </View>
         </TouchableHighlight>    
-
         </View>
       </View>   
     </View>
