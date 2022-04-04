@@ -7,8 +7,8 @@ import Me from '../Home/Me.png';
 
 export function AboutScreen() {
   return (
-    <View style={styles.box} >
-      <View  >
+    <View style={styles.box} > 
+      <View >
         <Image style={styles.AboutmeHeaderImage} source={HeaderImage} />
         <Image style={styles.Me} source={Me} />
         <Text style={{color: 'white'}} >lLSdfjlsödkjföalskdjflöadskfjalöskdjfölaskdjfls</Text>
