@@ -3,7 +3,7 @@ import { Text, StyleSheet, View, Image, Button, TouchableHighlight,Linking } fro
 
 import HeaderImage from '../About/about-masthead.png';
 
-import Me from '../Home/Me.png';
+import Me from '../Home/Me.jpg';
 
 export function AboutScreen() {
   return (
@@ -20,7 +20,7 @@ export function AboutScreen() {
         </TouchableHighlight>  
 
         <TouchableHighlight underlayColor="white"onPress={() => Linking.openURL('https://nico-t-ihle.github.io/NicoIhlePortfolio/')}>
-          <View style={styles.button2}>
+          <View style={styles.button}>
             <Text style={styles.buttonText}>Aboute me</Text>
           </View>
           
@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginTop: 30,
     marginBottom: 25,
+    borderRadius: 20,
   },
 
   AboutmeText: {
@@ -70,22 +71,24 @@ const styles = StyleSheet.create({
   button: {
     width: 260,
     alignItems: 'center',
-    backgroundColor: 'black',
+    backgroundColor: '#fff',
     borderRadius: 10,
+    marginBottom: 10,
   },
 
-  button2: {
-    marginTop: 15,
-    width: 260,
-    alignItems: 'center',
-    backgroundColor: 'black',
-    borderRadius: 10,
-  },
+  // button2: {
+  //   marginTop: 15,
+  //   width: 260,
+  //   alignItems: 'center',
+  //   backgroundColor: '#fff',
+  //   borderRadius: 10,
+  // },
 
   buttonText: {
     textAlign: 'center',
     padding: 20,
-    color: 'white'
+    color: '#000',
+    fontWeight: "bold"
   }
   
 });
