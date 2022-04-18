@@ -19,9 +19,7 @@ export function CustomDrawer(props) {
       </DrawerContentScrollView>
       <View style={{padding: 20, borderTopWidth: 1, borderTopColor: '#ccc'}} >
         <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 20,}} >
-         
           <Text>Sign out </Text>
-        
         </View>
       </View>
     </View>
